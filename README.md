@@ -66,6 +66,7 @@ Employee_Directory/
 cd backend
 python -m venv venv
 venv\Scripts\activate   # Windows
+```
 
 ### 2. Install dependencies
 pip install -r requirements.txt
