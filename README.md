@@ -66,12 +66,14 @@ Employee_Directory/
 cd backend
 python -m venv venv
 venv\Scripts\activate   # Windows
+```
 
 ### 2. Install dependencies
 pip install -r requirements.txt
 
 ### 3. Environment Variables
 DATABASE_URL=mysql+pymysql://<username>:<password>@localhost:3306/test
+A .env.example file is provided for reference.
 
 ### 4. Run Backend
 uvicorn app.main:app --reload
@@ -114,3 +116,31 @@ Response:
     "date_of_joining": "2022-06-15"
   }
 ]
+
+## Database Choice
+
+MySQL was chosen as the database because:
+
+- The data is structured and relational in nature
+- MySQL provides strong indexing support for search operations
+- It is widely used in production systems
+- SQL-based filtering allows efficient querying at scale
+
+Indexes are added on `name` and `department` to ensure fast search performance
+even as the number of employees grows.
+
+
+## Search Performance Optimization
+
+### Frontend Optimization
+- Search input is debounced to avoid sending an API request on every keystroke
+- API calls are triggered only after the user pauses typing
+- This reduces unnecessary network requests and improves UI responsiveness
+
+### Backend Optimization
+- Search is performed at the database level, not in application memory
+- Indexed columns (`name`, `department`) are used for filtering
+- Only required data is fetched, with a limited result set
+
+This approach ensures the system remains performant and scalable
+as the employee count increases.
