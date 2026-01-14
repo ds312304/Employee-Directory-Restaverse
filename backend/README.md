@@ -14,6 +14,7 @@ This is the backend service for the Employee Directory Search System, built usin
 
 The backend is designed with a **clean, layered architecture** to ensure scalability, maintainability, and performance.
 
+```
 ---
 
 ## Tech Stack
@@ -45,6 +46,7 @@ app/
 ```bash
 python -m venv venv
 venv\Scripts\activate   # Windows
+```
 
 ### 2. Install Dependencies
 pip install -r requirements.txt
