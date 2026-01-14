@@ -144,3 +144,15 @@ even as the number of employees grows.
 
 This approach ensures the system remains performant and scalable
 as the employee count increases.
+
+## Screenshots
+
+### Home Page
+![Home Page](image.png)
+
+### Search Results by Name
+![Search Results](image-1.png)
+
+### Search Result by Department
+![Search Result by Department](image-2.png)
+![Search Result by Department](image-3.png)

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEmployees } from "./hooks/useEmployees";
-import SearchBar from "./Components/searchBar";
 import EmployeeList from "./Components/EmployeeList";
+import SearchBar from "./Components/SearchBar";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -9,20 +9,22 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-  <div className="w-full max-w-xl bg-white p-6 rounded-xl shadow max-h-[80vh] overflow-y-auto">
-    <h2 className="text-2xl font-semibold mb-4 text-center">
-      Employee Directory
-    </h2>
+      <div className="w-full max-w-xl bg-white p-6 rounded-xl shadow max-h-[80vh] overflow-y-auto">
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Employee Directory
+        </h2>
 
-    <SearchBar value={searchTerm} onChange={setSearchTerm} />
+        <div className="sticky top-0 bg-white z-10 pb-2">
+          <SearchBar value={searchTerm} onChange={setSearchTerm} />
+        </div>
 
-    <EmployeeList
-      employees={employees}
-      loading={loading}
-      error={error}
-    />
-  </div>
-</div>
+        <EmployeeList
+          employees={employees}
+          loading={loading}
+          error={error}
+        />
+      </div>
+    </div>
 
   );
 };

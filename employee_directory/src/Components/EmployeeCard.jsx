@@ -5,7 +5,7 @@ const EmployeeCard = ({ employee }) => (
 
     <div className="mt-2 text-sm">
       <p><span className="font-medium">Email:</span> {employee.email}</p>
-      <p><span className="font-medium">Department:</span> {employee.department}</p>
+      <p><span className="px-2 py-1 text-xs rounded bg-blue-100 text-blue-700">Department:</span> {employee.department}</p>
       <p><span className="font-medium">Joined:</span> {employee.date_of_joining}</p>
     </div>
   </div>
