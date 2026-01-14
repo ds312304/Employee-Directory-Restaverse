@@ -1,0 +1,22 @@
+# Environment variables
+.env
+employee_directory/.env
+backend/.env
+
+__pycache__/
+*.pyc
+venv/
+backend/venv/
+
+# Node / React
+node_modules/
+employee_directory/node_modules/
+
+# Build output
+dist/
+employee_directory/dist/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
